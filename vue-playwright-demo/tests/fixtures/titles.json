@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "First Title in Fixture"
+    },
+    {
+        "id": 2,
+        "title": "Second Title in Fixture"
+    },
+    {
+        "id": 3,
+        "title": "Third Title in Fixture"
+    }
+]
