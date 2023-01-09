@@ -32,7 +32,7 @@ test.describe("Fixtures", () => {
       page.locator(
         "[data-testid=species] >> tr:nth-child(2) >> td:nth-child(1)"
       )
-    ).toHaveText("Human");
+    ).toHaveText("Static Human");
     await expect(
       page.locator(
         "[data-testid=species] >> tr:nth-child(2) >> td:nth-child(1)"
@@ -47,7 +47,6 @@ test.describe("Fixtures", () => {
 
   test("Tests diff. generated fixtures for diff. urls", async ({ page }) => {
     await page.route("https://swapi.dev/api/species", (route) => {
-      console.log("species");
       route.fulfill({
         status: 200,
         body: JSON.stringify(species_default),

@@ -13,21 +13,21 @@ test.describe("Navigation", () => {
     await expect(page).toHaveTitle(/Home/);
 
     await expect(page.locator('[data-testid=navigation] a').nth(0)).toHaveText("Home");
-    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("About");
-    await expect(page.locator('[data-testid=navigation] a').nth(5)).toHaveText("Broken Link");
+    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("Forms");
+    await expect(page.locator('[data-testid=navigation] a').nth(3)).toHaveText("Broken Link");
     await page.locator('[data-testid=navigation] a').nth(0).click();
     await expect(page).toHaveURL("http://localhost:8080/#/");
 
     await expect(page.locator('[data-testid=navigation] a').nth(0)).toHaveText("Home");
-    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("About");
-    await expect(page.locator('[data-testid=navigation] a').nth(5)).toHaveText("Broken Link");
+    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("Forms");
+    await expect(page.locator('[data-testid=navigation] a').nth(3)).toHaveText("Broken Link");
     await page.locator('[data-testid=navigation] a').nth(1).click();
-    await expect(page).toHaveURL("http://localhost:8080/#/about");
+    await expect(page).toHaveURL("http://localhost:8080/#/forms");
 
     await expect(page.locator('[data-testid=navigation] a').nth(0)).toHaveText("Home");
-    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("About");
-    await expect(page.locator('[data-testid=navigation] a').nth(5)).toHaveText("Broken Link");
-    await page.locator('[data-testid=navigation] a').nth(5).click();
+    await expect(page.locator('[data-testid=navigation] a').nth(1)).toHaveText("Forms");
+    await expect(page.locator('[data-testid=navigation] a').nth(3)).toHaveText("Broken Link");
+    await page.locator('[data-testid=navigation] a').nth(3).click();
     await expect(page).toHaveURL("http://localhost:8080/#/non-existent-path");
 
   });

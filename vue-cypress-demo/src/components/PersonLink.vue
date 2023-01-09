@@ -1,5 +1,5 @@
 <template>
-    <a v-bind:href=props.url>--{{ personName }}</a>
+    <a v-bind:href=props.url>{{ personName }}</a>
 </template>
 
 <script setup>

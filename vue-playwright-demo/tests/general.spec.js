@@ -9,7 +9,7 @@ test.describe("General tests", () => {
     await page.locator("[data-testid=loginSubmitButton]").click();
   });
 
-  test.only("should illustrate common test cases", async ({ page }) => {
+  test("should illustrate common test cases", async ({ page }) => {
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveTitle(/Home/);
@@ -30,8 +30,8 @@ test.describe("General tests", () => {
     await expect(page.locator("h1")).toHaveCount(2);
 
     // use test-id
-    await expect(page.locator("a")).toHaveCount(7); // all links
-    await expect(page.locator("[data-testid=navigation] a")).toHaveCount(6); // only links within an data-testid="navigation" element
+    await expect(page.locator("a")).toHaveCount(5); // all links
+    await expect(page.locator("[data-testid=navigation] a")).toHaveCount(4); // only links within an data-testid="navigation" element
   });
 
   // test.only('Focused test', async ({ page }) => {
