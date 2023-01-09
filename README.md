@@ -1,8 +1,11 @@
 # Frontend Test Demos
+
 A collection of demo projects illustrating different variations of frontend tests
 
 # Contents
+
 ## Vue
+
 * `vue-demo`  
 contains the demo project code and no test-related code. The `vue-demo/src` folder is copied to `vue-cypress-demo` and `vue-playwright-demo` folder
 * `vue-cypress-demo` 
