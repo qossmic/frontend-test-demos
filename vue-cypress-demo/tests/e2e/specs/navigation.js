@@ -1,3 +1,8 @@
+import { slowCypressDown } from 'cypress-slow-down'
+// slow down each command by the default amount
+// which is 1 second
+slowCypressDown();
+
 describe("Navigation", () => {
   beforeEach(() => {
     cy.visit("http://localhost:8080/");

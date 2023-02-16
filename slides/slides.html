@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="reveal.js-master/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js-master/dist/reveal.css">
+		<link rel="stylesheet" href="reveal.js-master/dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js-master/plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+
+			<div class="slides">
+
+                <!-- Slides are separated by three dashes (the default) -->
+                <section data-markdown>
+                    <script type="text/template">
+                        ## End2End-Testtools
+                        Daniela Berger - daniela.berger@qossmic.com
+                        ---
+                        ## Intro
+                        - Who am I?  <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - Why am I talking to you about tests?  <!-- .element: class="fragment" data-fragment-index="2" -->
+                        ---
+                        ## Types of Tests
+                        - Unit tests <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - E2E Tests / Regression Tests <!-- .element: class="fragment" data-fragment-index="2" -->
+                    </script>
+                </section>
+                <section data-markdown>
+                    <script type="text/template">
+                        ## Unit Tests with Jest
+
+                        utils/utils.ts
+                        ```js
+                        export const sum = (a:number, b:number) => {
+                            return a + b;
+                        }
+                        export default sum;
+                        ```
+                        utils/utils.test.ts
+                        ```js
+                        import { product, sum } from "./utils"
+
+                        test('adds 1 + 2 to equal 3', () => {
+                            expect(sum(1, 2)).toBe(3);
+                        });
+                        ```
+                    </script>
+                </section>
+
+                <section data-markdown>
+                    <script type="text/template">
+                        ## E2E Tests
+                        - Cypress  <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - Playwright  <!-- .element: class="fragment" data-fragment-index="2" -->
+                        ---
+                        ## Which Test Suite
+                        - Cypress vs Playwright <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - The main functionality is very similar <!-- .element: class="fragment" data-fragment-index="2" -->
+                        - The differences are in details. Important details? <!-- .element: class="fragment" data-fragment-index="3" -->
+                        - It is possible to switch <!-- .element: class="fragment" data-fragment-index="4" -->
+                        ---
+                        ## Recommendations
+                        - Integrate e2e tests into git merge requirements <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - Integrate unit tests into git commit hook or git merge requirements <!-- .element: class="fragment" data-fragment-index="2" -->
+                        - Add a no-only rule to linter <!-- .element: class="fragment" data-fragment-index="3" -->
+                        - Make writing tests as easy as possible <!-- .element: class="fragment" data-fragment-index="4" -->
+                        ---
+                        ## Reading
+                        - Cypress vs Playwright
+                        - https://www.kellton.com/kellton-tech-blog/cypress-vs-playwright-what-is-the-best-test-automation-framework
+                        - https://applitools.com/blog/cypress-vs-playwright/
+                        - https://www.zeljkovic.sh/blog/2022/cypress-vs-playwright-part-1
+                        ---
+                        ## Thank you for your time
+                    </script>
+                </section>
+
+                
+
+		<script src="reveal.js-master/dist/reveal.js"></script>
+		<script src="reveal.js-master/plugin/notes/notes.js"></script>
+		<script src="reveal.js-master/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js-master/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

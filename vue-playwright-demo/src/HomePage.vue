@@ -44,5 +44,9 @@
     biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und suchten einen Ausweg. War jetzt wirklich
     alles vorbei,
   </p>
-  <div>Sum = {sum(2, 3)}</div>
+  <div>Sum = {{sum(2, 3)}}</div>
 </template>
+
+<script setup>
+import sum from '/utils/utils.js';
+</script>

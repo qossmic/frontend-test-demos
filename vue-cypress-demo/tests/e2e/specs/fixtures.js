@@ -1,17 +1,22 @@
+import { slowCypressDown } from 'cypress-slow-down'
+// slow down each command by the default amount
+// which is 1 second
+slowCypressDown();
+
 import { people_alternative, people_alternative_2, people_default } from "../fixtures/people_generated";
 import { species_edited_values_updated } from "../fixtures/species_generated";
 
 describe("Fixtures", () => {
     beforeEach(() => {
   
-      cy.visit("http://localhost:8080/");
+      cy.visit("http://localhost:8080/#/");
       cy.get('[data-testid="loginLogoutButton"]').click();
       cy.get('[data-testid="loginUsernameField"]').type("user");
       cy.get('[data-testid="loginPasswordField"]').type("test123");
       cy.get('[data-testid="loginSubmitButton"]').click();
     });
   
-    it("Tests static fixtures", () => {
+    it.only("Tests static fixtures", () => {
       
       cy.intercept("/api/species", {
         //uses string
@@ -36,8 +41,6 @@ describe("Fixtures", () => {
   
       cy.title().should("eq", "Species");
     });
-
-  
 
   it("Tests diff. generated fixtures for diff. urls", () => {
     // static intercepts
@@ -72,7 +75,7 @@ describe("Fixtures", () => {
     cy.title().should("eq", "Species");
   });
 
-  it.only("Tests generated fixture with updated dates", () => {
+  it("Tests generated fixture with updated dates", () => {
     // static intercepts
     cy.intercept(/\/people/, {
       fixture: "people_static",
