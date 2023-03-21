@@ -1,0 +1,423 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+
+section.has-light-background,
+section.has-light-background h1,
+section.has-light-background h2,
+section.has-light-background h3,
+section.has-light-background h4,
+section.has-light-background h5,
+section.has-light-background h6 {
+  color: #222;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+:root {
+  --r-background-color: #191919;
+  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-main-font-size: 42px;
+  --r-main-color: #fff;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-heading-color: #fff;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: uppercase;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+  --r-code-font: monospace;
+  --r-link-color: #42affa;
+  --r-link-color-dark: #068de9;
+  --r-link-color-hover: #8dcffc;
+  --r-selection-background-color: rgba(66, 175, 250, 0.75);
+  --r-selection-color: #fff;
+}
+
+.backgroundContainer {
+  text-align: center;
+  position: relative;
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  padding-top: 81px;
+  background-image: linear-gradient(-45deg, rgb(36, 48, 89), rgb(6, 14, 43), rgb(128, 0, 79));
+  /* background-repeat-x: initial;
+background-repeat-y: initial; */
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-size: 400% 400%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.grzUFA {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* top: -110px;
+  left: 486px; */
+  width: 300%;
+  height: auto;
+  z-index: 1;
+  /* transform-origin-x: 0%;
+  transform-origin-y: 0%; */
+  transform-style: preserve-3d;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  transition-property: transform;
+  transform: rotate(25deg);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.hQsfNC {
+  stroke: rgb(194, 6, 123);
+  stroke-miterlimit: 10;
+  stroke-width: 0.1px;
+  opacity: 0.8;
+  fill: none;
+}
+
+.gLfFsk {
+  stroke: rgb(255, 255, 255);
+  opacity: 0.3;
+  stroke-miterlimit: 10;
+  stroke-width: 0.1px;
+  fill: none;
+}
+
+.reveal-viewport {
+  /* background: #191919; */
+  /* background-color: var(--r-background-color); */
+  /* background-image: url('data:image/svg+xml;charset=UTF-8,<svg class="BackgroundMaskstyles__Root-sc-wv8dqq-0 grzUFA" data-testid="BackgroundMask-root" width="593" height="741" viewBox="0 0 593 741" xmlns="http://www.w3.org/2000/svg" fill="none" style="top: -110px; left: 384px;"><path d="M177.62,251.04c14.17-.3,25.41-12.03,25.11-26.2-.29-13.55-11.07-24.54-24.61-25.09-13.86-.29-25.33,10.71-25.62,24.56,0,.18,0,.36,0,.54-.37,14.09,10.75,25.81,24.84,26.18,.1,0,.2,0,.29,0Z" class="BackgroundMaskstyles__LinePink-sc-wv8dqq-1 hQsfNC"></path><path d="M115.6,150.61c-6.7-.39-12.46,4.73-12.84,11.43-.39,6.7,4.73,12.46,11.43,12.84,6.7,.39,12.46-4.73,12.84-11.43,.01-.19,.02-.38,.02-.57,.07-6.5-4.97-11.9-11.45-12.28Z" class="BackgroundMaskstyles__LinePink-sc-wv8dqq-1 hQsfNC"></path><path d="M160.56,185.86c-1.08-6.07,2.97-11.86,9.03-12.94,.64-.11,1.28-.17,1.93-.17,7.78-.42,12.22-4.57,12.69-12.47,.92-14.53,4.66-80.88,5.94-99.43,.45-6.5-3.01-14.31-9.18-16.9-4.13-1.59-8.54-2.35-12.97-2.23-6.55,0-11.96-3.51-12.63-9.45-1.26-10.74-5.35-14.14-16.06-14.53-11.63-.39-65.48-4.41-81.52-5.58-10.29,.19-18.47,8.68-18.28,18.97,.01,.7,.06,1.39,.16,2.09,1.28,8.7-2.2,13.22-10.88,13.94-7.16,.26-12.75,6.27-12.49,13.43,0,.17,.02,.34,.03,.52,0,1.45-4.96,116.55-5.58,125.5-.81,10.65,6.36,20.81,17.18,21.22,7.47,.34,11.16,3.9,11.6,11.41,.64,10.42,9.61,18.36,20.03,17.72,.26-.02,.52-.04,.78-.06,16.2-2.18,32.46-4.18,48.78-5.58,9.85-.81,16.4-4.1,16.73-14.53,.4-5.93,5.53-10.42,11.46-10.02,.4,.03,.8,.08,1.2,.15,14.42,2.04,23.82-6.97,22.06-21.06Zm-14.92-14.25c-9.7-1.77-18.99,4.65-20.77,14.35-.35,1.93-.38,3.9-.1,5.84,1.23,8.81-3.63,14.73-12.61,14.2-12.47-.78-48.86-4.68-54.66-5.44-6.72-.84-9.96-4.43-10.29-11.16-1.92-37.1-6.02-124.59-5.86-131.22,.14-5.58,5.83-9.85,11.52-10.1,12.75-.56,73.77-3.93,90.36-4.91,5.81-.35,10.81,4.08,11.16,9.89,.03,.42,.03,.84,0,1.27,0,6.5,3.46,75.86,5.1,104.64,.56,8.79-5.16,13.97-13.86,12.63h0Z" class="BackgroundMaskstyles__LinePink-sc-wv8dqq-1 hQsfNC"></path><path d="M167.07,239c14.17-.3,25.41-12.03,25.11-26.2-.29-13.55-11.07-24.54-24.61-25.09-13.86-.29-25.33,10.71-25.62,24.56,0,.18,0,.36,0,.54-.37,14.09,10.75,25.81,24.84,26.18,.1,0,.2,0,.29,0Z" class="BackgroundMaskstyles__LineWhite-sc-wv8dqq-2 gLfFsk"></path><path d="M105.05,138.57c-6.7-.39-12.46,4.73-12.84,11.43-.39,6.7,4.73,12.46,11.43,12.84,6.7,.39,12.46-4.73,12.84-11.43,.01-.19,.02-.38,.02-.57,.07-6.5-4.97-11.9-11.45-12.28Z" class="BackgroundMaskstyles__LineWhite-sc-wv8dqq-2 gLfFsk"></path><path d="M150.01,173.82c-1.08-6.07,2.97-11.86,9.03-12.94,.64-.11,1.28-.17,1.93-.17,7.78-.42,12.22-4.57,12.69-12.47,.92-14.53,4.66-80.88,5.94-99.43,.45-6.5-3.01-14.31-9.18-16.9-4.13-1.59-8.54-2.35-12.97-2.23-6.55,0-11.96-3.51-12.63-9.45-1.26-10.74-5.35-14.14-16.06-14.53C117.13,5.31,63.27,1.3,47.23,.13c-10.29,.19-18.47,8.68-18.28,18.97,.01,.7,.06,1.39,.16,2.09,1.28,8.7-2.2,13.22-10.88,13.94-7.16,.26-12.75,6.27-12.49,13.43,0,.17,.02,.34,.03,.52,0,1.45-4.96,116.55-5.58,125.5-.81,10.65,6.36,20.81,17.18,21.22,7.47,.34,11.16,3.9,11.6,11.41,.64,10.42,9.61,18.36,20.03,17.72,.26-.02,.52-.04,.78-.06,16.2-2.18,32.46-4.18,48.78-5.58,9.85-.81,16.4-4.1,16.73-14.53,.4-5.93,5.53-10.42,11.46-10.02,.4,.03,.8,.08,1.2,.15,14.42,2.04,23.82-6.97,22.06-21.06Zm-14.92-14.25c-9.7-1.77-18.99,4.65-20.77,14.35-.35,1.93-.38,3.9-.1,5.84,1.23,8.81-3.63,14.73-12.61,14.2-12.47-.78-48.86-4.68-54.66-5.44-6.72-.84-9.96-4.43-10.29-11.16-1.92-37.1-6.02-124.59-5.86-131.22,.14-5.58,5.83-9.85,11.52-10.1,12.75-.56,73.77-3.93,90.36-4.91,5.81-.35,10.81,4.08,11.16,9.89,.03,.42,.03,.84,0,1.27,0,6.5,3.46,75.86,5.1,104.64,.56,8.79-5.16,13.97-13.86,12.63h0Z" class="BackgroundMaskstyles__LineWhite-sc-wv8dqq-2 gLfFsk"></path></svg>'); 
+  background-size: cover; */
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section>section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3 {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h1 {
+  text-shadow: var(--r-heading1-text-shadow);
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.3;
+}
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: var(--r-block-margin) auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: var(--r-block-margin) auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: var(--r-code-font);
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: var(--r-code-font);
+  text-transform: none;
+  tab-size: 2;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal .code-wrapper {
+  white-space: normal;
+}
+
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align=center],
+.reveal table td[align=center] {
+  text-align: center;
+}
+
+.reveal table th[align=right],
+.reveal table td[align=right] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: var(--r-block-margin) 0;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}

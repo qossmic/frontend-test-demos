@@ -8,10 +8,13 @@
 
 		<link rel="stylesheet" href="reveal.js-master/dist/reset.css">
 		<link rel="stylesheet" href="reveal.js-master/dist/reveal.css">
-		<link rel="stylesheet" href="reveal.js-master/dist/theme/black.css">
+		<link rel="stylesheet" href="reveal.js-master/dist/theme/qossmic.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="reveal.js-master/plugin/highlight/monokai.css">
+        <!-- TODOs -->
+        <!-- sections importieren? -->
+        <!-- reveal.js minimieren? -->
 	</head>
 	<body>
 		<div class="reveal">
@@ -19,6 +22,21 @@
 			<div class="slides">
 
                 <!-- Slides are separated by three dashes (the default) -->
+                <section class="template-intro" data-markdown>
+                    <script type="text/template" src="template.html"></script>
+                    <script type="text/template">
+                        ## End2End-Testtools
+                        Daniela Berger - daniela.berger@qossmic.com
+                        ---
+                        ## Intro
+                        - Who am I?  <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - Why am I talking to you about tests?  <!-- .element: class="fragment" data-fragment-index="2" -->
+                        ---
+                        ## Types of Tests
+                        - Unit tests <!-- .element: class="fragment" data-fragment-index="1" -->
+                        - E2E Tests / Regression Tests <!-- .element: class="fragment" data-fragment-index="2" -->
+                    </script>
+                </section>
                 <section data-markdown>
                     <script type="text/template">
                         ## End2End-Testtools
